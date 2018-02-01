@@ -105,7 +105,7 @@ Example response on Show method :
 
 By default you can limit paginated result by passing `limit` key on the request url
     
-    BASE_URL+/api/logs?limit=10
+    BASE_URL+/api/book?limit=10
 
 
 **Searching**
