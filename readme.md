@@ -21,7 +21,7 @@ just `use` the trait, and define `const MODEL` on your class.
 
 `$restConfig` property is custom configuration and it's optional.
 
-`TraitRestController` is trait that contain `index`, `show`, `store`, `update`, and `destroy` method. 
+`TraitRestController` is trait that contain `index`, `show`, `creat`, `update`, and `delete` method. 
 Please note that `store` and `update` **NOT** have any validation yet, so becareful when using it.
 
 
