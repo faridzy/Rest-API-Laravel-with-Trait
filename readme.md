@@ -6,11 +6,11 @@ A collection of trait to build simple REST controller in Laravel.
 Example usage on a Controller Class :
 
     use Illuminate\Http\Request;
-    use App\Traits\TraitsRestController;
+    use App\Traits\TraitRestController;
 
     class BookController extends Controller
     {
-        use TraitsRestController;
+        use TraitRestController;
 
         const MODEL = \App\Models\Book::class;
         
