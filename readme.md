@@ -21,7 +21,7 @@ just `use` the trait, and define `const MODEL` on your class.
 
 `$restConfig` property is custom configuration and it's optional.
 
-`TraitRestController` is trait that contain `index`, `show`, `store`, `update`, and `destroy` method. 
+`TraitRestController` is trait that contain `index`, `show`, `create`, `update`, and `delete` method. 
 Please note that `store` and `update` **NOT** have any validation yet, so becareful when using it.
 
 
@@ -41,61 +41,64 @@ After you use this trait on the controller, the next step is setup your applicat
 all method will **always** return JSON result, 
 
 Example response on Index method with paginated result:
-{
-    "code": 200,
-    "status": "success",
-    "data": {
-        "current_page": 1,
-        "data": [
-            {
-                "id": 1,
-                "book_name": "Matematika 3",
-                "book_description": "Buku untuk kelas 3 SMP",
-                "book_price": 50000,
-                "book_author": "Airlangga"
-            },
-            {
-                "id": 2,
-                "book_name": "Matematika 3",
-                "book_description": "Buku untuk kelas 3 SMP",
-                "book_price": 50000,
-                "book_author": "Airlangga"
-            },
-            {
-                "id": 3,
-                "book_name": "Matematika 3",
-                "book_description": "Buku untuk kelas 3 SMP",
-                "book_price": 50000,
-                "book_author": "Airlangga"
-            }
-        ],
-        "first_page_url": "http://localhost/laravel-coba/public/api/book?page=1",
-        "from": 1,
-        "last_page": 7,
-        "last_page_url": "http://localhost/laravel-coba/public/api/book?page=7",
-        "next_page_url": "http://localhost/laravel-coba/public/api/book?page=2",
-        "path": "http://localhost/laravel-coba/public/api/book",
-        "per_page": 3,
-        "prev_page_url": null,
-        "to": 3,
-        "total": 19
+
+
+    {
+        "code": 200,
+        "status": "success",
+        "data": {
+            "current_page": 1,
+            "data": [
+                {
+                    "id": 1,
+                    "book_name": "Matematika 3",
+                    "book_description": "Buku untuk kelas 3 SMP",
+                    "book_price": 50000,
+                    "book_author": "Airlangga"
+                },
+                {
+                    "id": 2,
+                    "book_name": "Matematika 3",
+                    "book_description": "Buku untuk kelas 3 SMP",
+                    "book_price": 50000,
+                    "book_author": "Airlangga"
+                },
+                {
+                    "id": 3,
+                    "book_name": "Matematika 3",
+                    "book_description": "Buku untuk kelas 3 SMP",
+                    "book_price": 50000,
+                    "book_author": "Airlangga"
+                }
+            ],
+            "first_page_url": "http://localhost/laravel-coba/public/api/book?page=1",
+            "from": 1,
+            "last_page": 7,
+            "last_page_url": "http://localhost/laravel-coba/public/api/book?page=7",
+            "next_page_url": "http://localhost/laravel-coba/public/api/book?page=2",
+            "path": "http://localhost/laravel-coba/public/api/book",
+            "per_page": 3,
+            "prev_page_url": null,
+            "to": 3,
+            "total": 19
+        }
     }
-}
-    
+        
 Example response on Show method :
 
     
-{
-    "code": 200,
-    "status": "success",
-    "data": {
-        "id": 1,
-        "book_name": "Matematika 3",
-        "book_description": "Buku untuk kelas 3 SMP",
-        "book_price": 50000,
-        "book_author": "Airlangga"
-    }
-}    
+    {
+        "code": 200,
+        "status": "success",
+        "data": {
+            "id": 1,
+            "book_name": "Matematika 3",
+            "book_description": "Buku untuk kelas 3 SMP",
+            "book_price": 50000,
+            "book_author": "Airlangga"
+        }
+    } 
+
 ### Example
 **Custom Limit**
 
